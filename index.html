@@ -16,7 +16,7 @@
             <a href="./" class="logo"><span class="logo-span">Web</span>Studio</a>
             <nav class="navigation">
             <ul class="nav-list">
-                <li class="list-item"><a href="./" class="nav-link">Студія</a></li>
+                <li class="list-item"><a href="./" class="nav-link current">Студія</a></li>
                 <li class="list-item"><a href="./portfolio.html" rel="noopener noreferer" class="nav-link">Портфоліо</a></li>
                 <li class="list-item"><a href="" class="nav-link">Контакти</a></li>
             </ul>
@@ -46,7 +46,7 @@
             <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br> ВАШОГО БІЗНЕСУ</h1>
             <button type="button" class="button" data-modal-open>Замовити послугу</button>
             <!-- Модальне вікно -->
-            <div class="backdrop" data-backdrop>
+            <div class="backdrop is-hidden" data-backdrop>
                 <div class="modal">
                     <button type="button" class="modal-button" data-modal-close></button> 
                 </div>
@@ -200,7 +200,6 @@
     </footer>
 
     <script>
-        (() => {
         const refs = {
             openModalBtn: document.querySelector("[data-modal-open]"),
             closeModalBtn: document.querySelector("[data-modal-close]"),
@@ -213,7 +212,6 @@
         function toggleModal() {
             refs.backdrop.classList.toggle('is-hidden');
         }
-        })();
     </script>
 </body>
 </html>
