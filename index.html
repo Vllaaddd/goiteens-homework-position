@@ -44,13 +44,13 @@
         <!-- Секція герой -->
         <section class="hero-section">
             <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ<br> ВАШОГО БІЗНЕСУ</h1>
-            <button type="button" class="button">Замовити послугу</button>
+            <button type="button" class="button" data-modal-open>Замовити послугу</button>
             <!-- Модальне вікно -->
-            <!-- <div class="backdrop">
+            <div class="backdrop" data-backdrop>
                 <div class="modal">
-                    <button type="button" class="modal-button"></button>
+                    <button type="button" class="modal-button" data-modal-close></button> 
                 </div>
-            </div> -->
+            </div>
         </section>
         <!-- Особливості -->
         <section class="section">
@@ -201,19 +201,19 @@
 
     <script>
         (() => {
-    const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        modal: document.querySelector("[data-modal]"),
-    };
+        const refs = {
+            openModalBtn: document.querySelector("[data-modal-open]"),
+            closeModalBtn: document.querySelector("[data-modal-close]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
 
-    refs.openModalBtn.addEventListener('click', toggleModal);
-    refs.closeModalBtn.addEventListener('click', toggleModal);
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
 
-    function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-    }
-    })();
+        function toggleModal() {
+            refs.backdrop.classList.toggle('is-hidden');
+        }
+        })();
     </script>
 </body>
 </html>
