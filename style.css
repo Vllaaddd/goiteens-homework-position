@@ -650,3 +650,27 @@ border: 0.5px solid #ECECEC;
 .link-thumb:focus .overlay{
     transform: translateY(0);
 }
+
+.cube{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation: cube 5s infinite;
+}
+
+@keyframes cube{
+    0%{
+        left: 0;
+        background-color: green;
+    }
+
+    50%{
+        left: 90%;
+        background-color: blue;
+    }
+
+    100%{
+        left: 0;
+        background-color: green;
+    }
+}
